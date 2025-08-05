@@ -25,7 +25,7 @@ export class EatStreet4 {
   async closeModalIfPresent() {
     const isVisible = await this.modalOptInButton.isVisible({ timeout: 3000 }).catch(() => false);
     if (isVisible) {
-      console.log('⚠️ Closing opt-in modal...');
+      console.log(' Closing opt-in modal...');
       await this.modalOptInButton.click();
     }
   }
@@ -33,7 +33,7 @@ export class EatStreet4 {
   async step1_verifyAddressInputVisible() {
     await this.closeModalIfPresent();
     await expect(this.addressInput).toBeVisible({ timeout: 5000 });
-    console.log('✅ Address input is visible');
+    console.log(' Address input is visible');
   }
 
   async step2_emulateUserClickSearchAndCheckError() {
@@ -41,7 +41,6 @@ export class EatStreet4 {
     await this.page.keyboard.type(' ');
     await this.page.keyboard.press('Tab');
 
-    // Примусово клікаємо на search через evaluate, якщо потрібно
     await this.page.evaluate(() => {
       const btn = document.querySelector('a.btn-food-search');
       if (btn) (btn as HTMLElement).click();
