@@ -21,7 +21,7 @@ test.describe('EatStreet Sign In Tests', () => {
             'a.btn-sign-in',
             'button:has-text("Sign In")',
             '[role="button"] >> text=/sign in/i',
-            'li[es-signin-button] a.btn-sign-in' // Додано локатор з вашого Page Object
+            'li[es-signin-button] a.btn-sign-in' 
         ];
 
         for (const locator of signInLocators) {
