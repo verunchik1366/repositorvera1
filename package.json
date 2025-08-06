@@ -1,0 +1,26 @@
+{
+  "name": "repositorvera1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/verunchik1366/repositorvera1.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/verunchik1366/repositorvera1/issues"
+  },
+  "homepage": "https://github.com/verunchik1366/repositorvera1#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.53.2",
+    "@types/node": "^24.0.8"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^9.9.0",
+    "pdf-parse": "^1.1.1"
+  }
+}
