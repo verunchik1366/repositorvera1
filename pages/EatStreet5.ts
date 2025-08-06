@@ -11,7 +11,6 @@ export class EatStreet5 {
   constructor(page: Page) {
     this.page = page;
     
-    // Ініціалізація локаторів
     this.saveBigContainer = page.locator('div.container--fluid:has-text("Save Big, Eat Happy!")');
     this.emailInput = page.locator('input#new-email');
     this.nameInput = page.locator('input#new-name');
@@ -20,14 +19,12 @@ export class EatStreet5 {
   }
 
   async verifyAllElements() {
-    // Очікування появи елементів
     await this.saveBigContainer.waitFor();
     await this.emailInput.waitFor();
     await this.nameInput.waitFor();
     await this.checkbox.waitFor();
     await this.submitButton.waitFor();
 
-    // Перевірка видимості
     await expect(this.saveBigContainer).toBeVisible();
     await expect(this.emailInput).toBeVisible();
     await expect(this.nameInput).toBeVisible();
